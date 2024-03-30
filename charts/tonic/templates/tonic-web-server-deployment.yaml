@@ -3,7 +3,7 @@
   $server.resources
   (dict "limits" (dict "memory" "3Gi") "requests" (dict "memory" "2Gi" "ephemeral-storage" "1Gi")) -}}
 {{- $ports := $server.ports | default dict }}
-{{- $httpsOnly := $ports.httpsOnly | default true }}
+{{- $httpsOnly := $ports.httpsOnly }}
 {{- $httpPort := $ports.http | default 6580 }}
 {{- $httpsPort := $ports.https | default 6543 }}
 apiVersion: apps/v1
