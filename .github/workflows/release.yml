@@ -21,8 +21,8 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-          mkdir charts
-          cp -R templates Chart.yaml charts/
+          mkdir -p charts/tonic
+          cp -R templates Chart.yaml charts/tonic/
           git add .
           git commit -m "ci: add charts [do not push]"
 
