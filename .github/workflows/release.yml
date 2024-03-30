@@ -22,7 +22,7 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
           mkdir charts
-          mv (!charts) charts
+          mv !(charts) charts
           echo $PWD
           ls -la
           ls -la charts
