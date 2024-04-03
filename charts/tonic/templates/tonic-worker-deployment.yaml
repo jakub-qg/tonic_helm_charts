@@ -37,6 +37,7 @@ spec:
     metadata:
       annotations:
         {{- include "tonic.annotations" (list $) | nindent 8 }}
+        {{- include "tonic.annotations" (list $ $worker.podAnnotations) | nindent 8 }}
       labels:
         {{- include "tonic.allLabels" (list $ (dict "app" "tonic-worker")) | nindent 8 }}
     spec:
